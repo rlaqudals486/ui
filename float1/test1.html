@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+    <style>
+        /* 태그의 너비, 높이의 기준을 어디에 두는가를 설정하는 속성 */
+       * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            /* 컨텐츠 영역과 외부 테두리 선 사이의 빈공간 */
+            padding: 30px;
+            /* 텍스트를 중앙 정렬 */
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .footer {
+            background-color: #9b9696;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .boxa {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            background-color: hotpink;
+
+        }
+
+        .boxb {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .boxc {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            background-color: greenyellow;
+        }
+        
+        .main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 576px) {
+            .boxa {width: 100%;}
+            .boxb {width: 100%;}
+            .boxc {width: 100%;}
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>대충 홈페이지 제목이라는 뜻</h1>
+    </div>
+    <div class="main">
+        <div class="boxa">
+            <p>대충 사이드바</p>
+        </div>
+        <div class="boxb">
+            <p>대충 메인</p>
+        </div>
+        <div class="boxc">
+            <p>대충 오른쪽 사이드바</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>대충 발</p>
+    </div>
+</body>
+</html>
