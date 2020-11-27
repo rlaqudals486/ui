@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui2</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: teal;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0px;
+        }
+
+        /* dispaly : block 인 태그를 width의 크기를 지정하고 margin 값 중 left, right를 auto로 주면 중앙 정렬됨 */
+        section {
+            width: 960px;
+            margin: 0 auto; /* 공식 */
+        }
+
+        article {
+            margin: 10px;
+        }
+
+        /* 이미지를 넣기 위한 공간 */
+        .box-img {
+            float: left;
+            width: 33%;
+        }
+
+        /* 부모 태그의 크기만큼 이미지의 크기를 설정하기 위함 */
+        .box-img img {width: 100%;}
+
+        /* 텍스트를 입력하기 위한 공간 */
+        .box-text {
+            float: left;
+            width: 67%;
+            padding: 15px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>제목부분</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <div class="box-img">
+                    <img src="/images/img_5terre.jpg" alt="">
+                </div>
+
+                <div class="box-text">
+                    <h2>5terre</h2>
+                    <p>이쯤에서 질문을 해
+                        내 꿈에 관해 왜 난 이럴까?
+                        물음표로 수놓인 밤하늘
+                        나를 내려다 보는 star
+                        괜히 오늘따라 더 높아 보이기만 하네
+                        내가 다 큰 줄 알고 내 귓등에
+                        쌓아 놓은 듣기 싫은 잔소린
+                        내 존심과 싸워 결과는 뻔해
+                        아마도 저번에 어머니가 했던
+                        걱정들이 틀린게 없나보네
+                        화살인 시간을 피하기가
+                        어려워 흘렸던건 피 아닐까?
+                        따가운 시선과 많이 찢어진 내 의지에
+                        이제와서 난 삐약인다
+                        수많은 더하기와 빼기
+                        짝대기를 달은 내 기분
+                        누군가에겐 시시콜콜한
+                        얘기뿐일수도 있어 그래
+                        난 걔들이 부러워
+                        오늘 내 노트는 드러워져</p>
+                </div>
+
+                <div class="box-img">
+                    <img src="/images/img_5terre.jpg" alt="">
+                </div>
+
+                <div class="box-text">
+                    <h2>5terre</h2>
+                    <p>눈 가린 소년 하나 팔아, boy bye
+                        쟤 저런 표정해도 사실 아무것도 몰라
+                        버려 갖고 놀다
+                        또 하나는 조금 고장났지만 검은 정장으로 가려놨지
+                        저 아이가 주는 장미 받지마, 넌 찔려 가시에, ay
+                        자, 이제 골라
+                        내 마지막 순수함은 sold out
+                        내 마지막 순수함은 sold out
+                        내 마지막 순수함은 sold out
+                        Sold out
+                        아직 너무 어리지 스물하나밖에
+                        그게 이유인가 많은 시기받아
+                        내 친구들 숨기고 혼자있지 한 가운데
+                        I don't switchin lane
+                        I just switchin line, 갈아 fam
+                        너무 많은걸 봤나, 난 치료가 필요해
+                        근데 원장님 그냥 좋은 생각하라 하네
+                        내가 여기 래퍼들이랑 같은 줄 알아
+                        행복 핑계로 오늘도 편안한 밤 보내, 병신아
+                        Ay, ay, whoa, 신아, 구해 인간
+                        애네 지구가 원인가에 관해 싸우니까
+                        지각 깨져, 신과 구의 집합</p>
+                </div>
+
+                <div class="box-img">
+                    <img src="/images/img_5terre.jpg" alt="">
+                </div>
+
+                <div class="box-text">
+                    <h2>5terre</h2>
+                    <p>눈 가린 소년 하나 팔아, boy bye
+                        쟤 저런 표정해도 사실 아무것도 몰라
+                        버려 갖고 놀다
+                        또 하나는 조금 고장났지만 검은 정장으로 가려놨지
+                        저 아이가 주는 장미 받지마, 넌 찔려 가시에, ay
+                        자, 이제 골라
+                        내 마지막 순수함은 sold out
+                        내 마지막 순수함은 sold out
+                        내 마지막 순수함은 sold out
+                        Sold out
+                        아직 너무 어리지 스물하나밖에
+                        그게 이유인가 많은 시기받아
+                        내 친구들 숨기고 혼자있지 한 가운데
+                        I don't switchin lane
+                        I just switchin line, 갈아 fam
+                        너무 많은걸 봤나, 난 치료가 필요해
+                        근데 원장님 그냥 좋은 생각하라 하네
+                        내가 여기 래퍼들이랑 같은 줄 알아
+                        행복 핑계로 오늘도 편안한 밤 보내, 병신아
+                        Ay, ay, whoa, 신아, 구해 인간
+                        애네 지구가 원인가에 관해 싸우니까
+                        지각 깨져, 신과 구의 집합</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

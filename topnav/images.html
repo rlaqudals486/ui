@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side by side</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: mediumspringgreen;
+            border: 2px solid black;
+            height: 90px;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            padding: 6px;
+        }
+
+        .img-container {
+            float: left;
+            padding: 5px;
+            width: 33.33%;
+        }
+
+        .img-container img {width: 100%;}
+
+        .img-container > .div01, .div02, .div03 {
+            border: 1px;
+            width: 100%;
+            box-shadow: 1px 1px 6px 0px gray;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .box::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>다양한 짤들 on</p>
+    </header>
+    <br>
+    <body>
+        <div class="box">
+            <div class="img-container">
+                <img src="/float1/images/제리감사.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>제리 1 감사</p>
+                </div>
+            </div>
+        
+            <div class="img-container">
+                <img src="/float1/images/제리감사분신.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>제리 4 감사</p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="/float1/images/집단구타.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>짱구 구타</p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="/float1/images/김국진홈런.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>촛불끄기</p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="/float1/images/피카츄 뺨.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>뺨 싸대기</p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="/float1/images/택시감탄.gif" alt="" height="300px">
+                <div class="div01">
+                    <p>WA !</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
