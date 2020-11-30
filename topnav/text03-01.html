@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 3day 1st file</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            }
+
+        header {
+            padding: 15px;
+        }
+
+        .first_box {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .first_box:hover, .second_box:hover{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .big_box1 {
+            border: 0.5px solid lightgray;
+            background-color: black;
+            padding: 32px 16px;
+        }
+
+        .big_box2 {
+            border: 0.5px solid lightgray;
+            background-color: #4CAF50;
+            padding: 32px 16px;
+        }
+
+        .big_box1 > #p01 {
+            color: white;
+            font-size: 24px;
+        }
+
+        .big_box2 > #p02 {
+            color: white;
+            font-size: 24px;
+        }
+
+        .small_box1, .small_box2, .small_box3, .small_box4, .small_box5{
+            border: 0.5px solid lightgray;
+            padding: 16px;
+        }
+
+        .small_box5 > #h22{
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .small_box6 {
+            border: 0.5px solid lightgray;
+            background-color: #f1f1f1;
+            padding: 24px 16px;
+        }
+
+        .small_box6 > .btn01 {
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 15px;
+        }
+
+        .btn01:hover {
+            /* cursor : 마우스 포인트 속성 */
+            cursor: pointer;
+            background-color: rgb(118, 118, 118);
+            color: black;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 576px) {
+            .first_box {width: 100%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Responsive Pricing Tables</h3>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="first_box">
+                    <div class="big_box1">
+                        <p id="p01">Basic</p>
+                    </div>
+                    <div class="small_box1">
+                        <b>10GB</b> Storeage
+                    </div>
+                    <div class="small_box2">
+                        <b>10</b> Emails
+                    </div>
+                    <div class="small_box3">
+                        <b>10</b> Domains
+                    </div>
+                    <div class="small_box4">
+                        <b>Endless</b> Support
+                    </div>
+                    <div class="small_box5">
+                        <h2 id="h22">$ 10</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="small_box6">
+                        <button class="btn01">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="first_box">
+                    <div class="big_box2">
+                        <p id="p02">Pro</p>
+                    </div>
+                    <div class="small_box1">
+                        <b>25GB</b> Storeage
+                    </div>
+                    <div class="small_box2">
+                        <b>25</b> Emails
+                    </div>
+                    <div class="small_box3">
+                        <b>25</b> Domains
+                    </div>
+                    <div class="small_box4">
+                        <b>Endless</b> Support
+                    </div>
+                    <div class="small_box5">
+                        <h2 id="h22">$ 25</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="small_box6">
+                        <button class="btn01">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="first_box">
+                    <div class="big_box1">
+                        <p id="p01">Premium</p>
+                    </div>
+                    <div class="small_box1">
+                        <b>50GB</b> Storeage
+                    </div>
+                    <div class="small_box2">
+                        <b>50</b> Emails
+                    </div>
+                    <div class="small_box3">
+                        <b>50</b> Domains
+                    </div>
+                    <div class="small_box4">
+                        <b>Endless</b> Support
+                    </div>
+                    <div class="small_box5">
+                        <h2 id="h22">$ 50</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="small_box6">
+                        <button class="btn01">Sign Up</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

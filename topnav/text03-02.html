@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 3day 2번째 file</title>
+
+    <!-- icon을 사용하기 위해서 font awesome 로드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .big_box01 {
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            margin: 10px;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        /* text-align 속성은 후손태그들에게 상속됨 */
+        /* form {
+            text-align: center;
+        }
+
+        form > div {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgray;
+        } */
+
+        .input-line > div {
+            float: left;
+            font-size: 32px;
+            padding: 10px;
+        }
+
+        .input-line .input-icon {
+            width: 50px;
+        }
+
+        .input-line .input-text {
+            overflow: hidden;
+            width: 96%;
+        }
+        
+        .input-line i {
+            color: #2196F3;
+        }
+
+        .input-line input {
+            font-size: 24px;
+            width: 100%;
+            padding: 8px;
+            display: block;
+        }
+
+        .input-line::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        h1 {
+            color: #2196F3;
+            /* font-weight: 속성은 100 ~ 900까지, 기본값/normal/4000, bold/700 */
+            font-weight: 400;
+        }
+
+        .btn01 {
+            color: white;
+            background-color: #2196F3;
+            font-size: 1.3em;
+            width: 100px;
+            height: 50px;             
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- font 클래스 뒤에 style 태그를 넣어 사이즈, 색상 변경 가능 / id 지정 후 css에서 바꾸기도 가능 -->
+
+    <body>
+        <div class="big_box01">
+            <h1>Contact us</h1>
+            <!-- input 태그와 icon을 사용하기 위한 div -->
+            <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+                <div class="input-icon">
+                    <i class="fa fa-adn"></i>
+                </div>
+                <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한 div -->
+                <div class="input-text">
+                    <!-- input의 display 속성을 block 변경, width: 100%로 설정 -->
+                    <input type="text" name="first" placeholder="First name">
+                </div>
+            </div>
+
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-sort-alpha-asc"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" name="last" placeholder="Last name">
+                </div>
+            </div>
+
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-address-card"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" name="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-phone-square"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" name="phone" placeholder="Phone">
+                </div>
+            </div>
+
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" name="message" placeholder="Message">
+                </div>
+            </div>
+            <button class="btn01">send</button>
+        </div>
+    </body>
+
+    
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 3day 3번째 file</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 10px;
+            background-color: #009688;
+            color: white;
+        }
+
+        .spa2 {
+            float: right;
+        }
+
+        .atag01 {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 0 auto;
+        }
+
+        article {
+            margin: 10px;
+        }
+
+        .left_box {
+            float: left;
+            width: 65%;
+        }
+
+        .left_box img {
+            width: 100%;
+        }
+
+        #p01 {
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .table01, .table02 {
+            margin-bottom: 10px;
+        }
+
+        .table01, .table02, .table03 {
+            width: 100%;
+            font-size: 20px;
+        }
+
+        #trhead {
+            background-color: #009688;
+            color: white;
+        }
+
+        td {
+            padding-left: 10px;    
+        }
+        #trbody02 {
+            background-color: lightgray;
+        }
+
+        .h2text {
+            font-size: 40px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wite Wines - Sauvigon Blanc</h1>
+        <div class="atag01">
+            <a href="www.naver.com">
+                <span><<</span>
+            </a>
+        
+            <a href="www.naver.com">
+                <span class="spa2">>></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <div class="left_box">
+                    <img src="/float1/images/img_chardonnay.jpg" alt="">
+                    <p id="p01">Sauvignon Blanc</p>
+                    <table class="table01">
+                        <thead  id="trhead">
+                            <tr>
+                                <th style="width: 30%;">Food</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr id="trbody01">
+                                <td>Seafood</td>
+                                <td>Fish</td>
+                            </tr>
+
+                            <tr id="trbody02">
+                                <td>Meat</td>
+                                <td>Chicken, Pork, Veal</td>
+                            </tr>
+
+                            <tr id="trbody01">
+                                <td>Cheese</td>
+                                <td>Herbed goat cheese, Nutty cheese, Gruyere</td>
+                            </tr>
+
+                            <tr id="trbody02">
+                                <td>Other</td>
+                                <td>Mexican, Vietnamese</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+
+                    <table class="table02">
+                        <thead  id="trhead">
+                            <tr>
+                                <th style="width: 30%;">Age</th>
+                                <th>Flavour</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Less Ripe</td>
+                                <td>Lime, Gooseberry</td>
+                            </tr>
+
+                            <tr id="trbody02">
+                                <td>Medium</td>
+                                <td>Green apple, Citrus, Passion fruit</td>
+                            </tr>
+
+                            <tr>
+                                <td>More Ripe</td>
+                                <td>Grapefruit, Peach, Melon</td>
+                            </tr>
+
+                            <tr id="trbody02">
+                                <td>Oaked</td>
+                                <td>Vanila, Smoke</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+
+                    <p id="p01">Neighbors</p>
+                    <table class="table03">
+                        <thead  id="trhead">
+                            <tr>
+                                <th style="width: 30%;">Neighbor</th>
+                                <th>Flavour</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Vermentino</td>
+                                <td>More floral and citrus</td>
+                            </tr>
+
+                            <tr id="trbody02">
+                                <td>Gruner Veltiner</td>
+                                <td>More lime, lemon, and grapfruit</td>
+                            </tr>
+
+                            <tr>
+                                <td>Verdejo</td>
+                                <td>More texture and peach</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+                <div class="right_box">
+                    <h2 class="h2text">Sauvignon Blanc</h2>
+                    <br>
+                    <p>Depending on the climate, the flavor can range from grass to tropical fruit.
+                        <br><br>
+                        In cooler climates, the wines have noticeable acidity and flavors of grass and passion fruit.
+                        <br><br>
+                        In warmer climates, the wines can develop over-ripeness aromas like grapefruit, peach, and melon.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
