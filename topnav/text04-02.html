@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 4day 2번째 file</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .headp {
+            float: right;
+            background-color: #009688;
+            width: 80%;
+            font-size: 40px;
+            padding: 70px 100px;
+            text-align: center;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .headp::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .sidebar {
+            float: left;
+            width: 20%;
+        }
+
+        .sideLearn :hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .sidebar::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #sideicon > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        li {
+            float: left;
+            width: 33%;
+            text-align: center;
+        }
+
+        .ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        li a {
+            color:white; 
+            text-decoration: none;
+            padding: 10px 16px;
+            display: inline-block;
+        }
+
+        .sidelink {
+            border: 1px solid lightgray;
+        }
+
+        .sidelink img {
+            padding: 15px;
+            width: 80%;
+        }
+
+        .btn01 {
+            border: none;
+            font-size: 15px;
+            padding: 15px 15px;
+            background-color: white;
+            font-weight: 700;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .maindiv {
+            width: 80%;
+            float: right;
+            
+        }
+
+        .main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .mainsec1 {
+            background-color: #f1f1f1;
+            margin-bottom: 15px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: 400;
+            padding: 15px 15px;
+        }
+
+        h2 {
+            font-weight: 400;
+            padding: 5px 15px;
+            margin-bottom: 10px;
+        }
+
+        .divbtn02 {
+            padding: 5px 15px;
+            margin-bottom: 10px;
+        }
+
+        .btn02 {
+            border: none;
+            padding: 10px 16px;
+            background-color: teal;
+            color: white;
+        }
+
+        .divbtn03 {
+            padding: 0px 15px;
+            padding-bottom: 15px;
+        }
+
+        .sec1text {
+            background-color: white;
+            width: 97%;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid green;
+        }
+
+        pre {
+            padding: 15px
+        }
+
+        .sp01 {
+            color:brown;
+        }
+
+        .sp02 {
+            color: red;
+        }
+
+        .sp03 {
+            color:blue;
+        }
+
+        .mainsec2 {
+            background-color: #f1f1f1;
+            color: gray;
+            text-align: left;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 576px) {
+            .headp  {width: 100%;}
+            .sidebar {width: 100%;}
+            .maindiv {width: 100%;}
+            .mainsec1 {width: 100%;}
+            .mainsec2 {width: 100%;}
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="headp">
+            W3Schools.com
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+                <nav id="sideicon">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-align-justify"></i></a></li>
+                        <li><a href="#"><i class="fa fa-file-text-o"></i></a></li>
+                        <li><a href="#"><i class="fa fa-camera"></i></a></li>
+                    </ul>
+                </nav>
+            <div class="sidelink">
+                <img src="/float1/images/w3schools.png" alt="">
+            </div>
+            <div class="sideLearn">
+                <button class="btn01">Learn HTML</button><br>
+                <button class="btn01">Learn W3.CSS</button><br>
+                <button class="btn01">Learn Javascript</button><br>
+                <button class="btn01">Learn SQL</button><br>
+                <button class="btn01">Learn PHP</button>
+            </div>
+        </div>
+
+        <div class="maindiv">
+            
+            <div class="mainsec1">
+                <h1>CSS</h1>
+                <h2>The Language for Styling Web Pages</h2>
+                <div class="divbtn02">
+                    <button class="btn02">LEARN CSS</button>
+                    <button class="btn02">CSS REFERENCE</button>
+                </div>
+                <div class="sec1text">
+                   <pre>
+<span class="sp01">body</span> {
+    <span class="sp02">background-color</span>: <span class="sp03">#d0e4fe;</span>
+}
+<span class="sp01">h1</span> {
+    <span class="sp02">color</span>: <span class="sp03">orange</span>;
+    <span class="sp02">text-align</span>: <span class="sp03">center</span>;
+}
+<span class="sp01">p</span> {
+    <span class="sp02">font-family</span>: <span class="sp03">"Times New Roman";</span>
+    <span class="sp02">font-size</span>: <span class="sp03">20px;</span>
+}
+                    </pre>
+                </div>
+                <div class="divbtn03">
+                    <button class="btn02">Try it Yourself</button>
+                </div>
+            </div>
+        
+
+            <div class="mainsec1">
+                <h1>JS</h1>
+                <h2>The Language for Programming Web Pages</h2>
+                <div class="divbtn02">
+                    <button class="btn02">LEARN JS</button>
+                    <button class="btn02">JS REFERENCE</button>
+                </div>
+                <div class="sec1text">
+                   <pre>
+// Click the button to change the color of this paragraph
+
+function myFunction() {
+    var x;
+    x = document.getElementById("demo");
+    x.style.fontSize = "25px";
+    x.style.color = "red";
+}
+                    </pre>
+                </div>
+                <div class="divbtn03">
+                    <button class="btn02">Try it Yourself</button>
+                </div>
+            </div>
+
+            <div class="mainsec2">
+                <div class="footer1">
+                    <nav>
+                        <a href="https://www.w3schools.com/forum/default.asp">FORUM</a> | <a href="https://www.w3schools.com/about/default.asp">ABOUT</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

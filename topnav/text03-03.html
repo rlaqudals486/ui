@@ -16,6 +16,8 @@
             padding: 10px;
             background-color: #009688;
             color: white;
+            /* 아래의 main 부분과 거리를 두기 위한 공간 */
+            margin-bottom: 15px;
         }
 
         .spa2 {
@@ -38,7 +40,7 @@
 
         .left_box {
             float: left;
-            width: 65%;
+            width: 60%;
         }
 
         .left_box img {
@@ -58,16 +60,25 @@
         .table01, .table02, .table03 {
             width: 100%;
             font-size: 20px;
+            /* table의 각각의 cilumn의 인접 테두리선을 하나로 합하여 줌 */
+            border-collapse: collapse;
         }
 
-        #trhead {
+        th {
             background-color: #009688;
             color: white;
+            padding-left: 10px;
+            padding: 10px;
+            text-align: left;
         }
 
         td {
             padding-left: 10px;    
+            text-align: left;
+            padding: 10px;
         }
+
+        /* nth-child() : 주로 표 사용 시 짝수 혹은 홀수별로 선택하기 위한 선택자, odd(홀수), even(짝수) */
         #trbody02 {
             background-color: lightgray;
         }
@@ -76,10 +87,26 @@
             font-size: 40px;
         }
 
+        .right_box {
+            float: left;
+            padding : 0px 10px;
+            width: 35%;
+        }
+
+        .right_box * {
+            margin : 15px 0px;
+            font-weight: 400;
+        }
+
         article::after {
             content: "";
             display: table;
             clear: both;
+        }
+
+        @media (max-width: 576px) {
+            .left_box {width: 100%;}
+            .right_box {width: 100%;}
         }
     </style>
 </head>
@@ -198,11 +225,11 @@
 
                 <div class="right_box">
                     <h2 class="h2text">Sauvignon Blanc</h2>
-                    <br>
+                    
                     <p>Depending on the climate, the flavor can range from grass to tropical fruit.
-                        <br><br>
+                        
                         In cooler climates, the wines have noticeable acidity and flavors of grass and passion fruit.
-                        <br><br>
+                        
                         In warmer climates, the wines can develop over-ripeness aromas like grapefruit, peach, and melon.</p>
                 </div>
             </article>
