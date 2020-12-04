@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/myStyle.css
+    ">
+    <title>반응형 웹 사이트</title>
+
+    <!-- 반응형 웹 : 디바이스의 화면 크기에 따라서 여러가지 화면으로 변경되는 웹 사이트 구축 방식 -->
+        <!-- 미디어쿼리를 사용하여 화면 크기에 따라서 CSS 속성을 변경시켜 여러가지 화면 크기의 사이트를 구축 -->
+    <!-- 뷰포트 (viewport) : 웹 페이지에서 사용자가 볼 수 있는 영역 -->
+        <!-- 디바이스에 따라서 뷰포트는 다르며 컴퓨터 화면보다 스마트폰의 화면이 더 작음 -->
+        <!-- html5는 웹 디자이너가 meta 태그를 통해서 뷰포트를 설정할 수 있음 -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+            <!-- width=device-width : 디바이스의 화면 너비로 현재 사이트의 너비를 설정 -->
+            <!-- initial-scale=1.0 : 현재 화면의 확대/축소 수준 1.0 현재 화면의 크기를 100%로 사용함 -->
+    <!-- 미디어 쿼리 : 반응형 웹 사이트를 제작하는데 필수적인 속성 -->
+        <!-- 지정한 화면 크기에 따라서 CSS속성을 다르게 사용할 수 있음 -->
+        <!-- 미디어쿼리는 구형 브라우저에서는 동작하지 않을 수 있음 -->
+        <!-- 사용법 : @media not|only 미디어타입 and (미디어쿼리 적용 옵션) {
+            CSS 코드
+        }    -->
+        <!-- not|only : only는 지정한 CSS 형식대로 사용하겠다는 의미, not 지정한 CSS형식의 반대로 사용 -->
+        <!-- 미디어 타입 : all, print, screen, speech -->
+            <!-- all : 기본값, 모든 디바이스에 적용 -->
+            <!-- print : 각종 프린트 디바이스 -->
+            <!-- screen : 컴퓨터 모니터, 테블릿 화면, 스마트폰 화면 등 각종 디바이스 화면 (all과 함께 가장 많이 사용)-->
+            <!-- speech : 문자를 읽어주는 디바이스(TTS) -->
+        <!-- 미디어쿼리 적용 옵션 : 주로 max-witdh, min-width를 사용 (웹 사이트 제작은 screen, all을 주로 사용) -->
+    <!-- 각 디바이스 마다의 화면 설정 크기(bootstrap 기준) -->
+        <!-- extra small : 576px 미만 -->
+        <!-- small : 576px 까지 -->
+        <!-- media : 768px 까지 -->
+        <!-- large : 992px 까지 -->
+        <!-- extra large : 1200px 이상 -->
+    <!-- 반응형 웹 사용 시 이미지 출력 방법 -->
+        <!-- 기존의 이미지 출력 방식을 사용하게 되면 반응형 웹 적용 시 이미지의 크기가 고정되어 있어 제대로 표현되지 않을 가능성이 높음 -->
+        <!-- width 속성 사용 : width를 %로 표기, height를 auto로 설정 -->
+        <!-- max-width 속성 사용 :width 대신 max-width를 사용하고 %로 표기, height를 auto로 설정 -->
+    <!-- 미디어 쿼리를 사용하여 화면 크기에 따라 다른 이미지 사용 -->
+        <!-- 미디어쿼리 사용(배경 이미지 사용 시) -->
+            <!-- 미디어쿼리를 통하여 배경 이미지의 url()을 변경 -->
+            <!-- background-image: url("이미지 경로"); -->
+        <!-- pictrue 태그 사용 -->
+            <!-- picture 태그 내에 source 태그를 추가하여 화면의 크기에 따라 다른 이미지를 출력하게 함 -->
+            <!-- img 태그에 src 속성값을 변경 -->
+</head>
+<body>
+    <header>
+        <h1>반응형 웹 사이트 예제</h1>
+    </header>
+
+    <main>
+        <aside class="col-3 col-s-3 menu">
+            <ul>
+                <li>메뉴 1</li>
+                <li>메뉴 2</li>
+                <li>메뉴 3</li>
+                <li>메뉴 4</li>
+            </ul>
+        </aside>
+
+        <section class="col-6 col-s-9">
+            <h1>메뉴 1</h1>
+            <p>
+                헤일 이름과, 나는 별 이런 멀듯이, 계십니다. 내린 마리아 가난한 별 가을로 계집애들의 나는 있습니다.
+            </p>
+        </section>
+
+        <aside class="col-3 col-s-12">
+            <div class="right">
+                <h2>오른쪽</h2>
+                <p>하나에 언덕 가득 이제 벌레는 아름다운 풀이 하나에 강아지, 거외다. 가난한 피어나듯이 다 우는 이네들은 이름을 지나고 오는 라이너 까닭입니다.</p>
+                <h2>사이드바</h2>
+                <p>잔디가 아무 이네들은 그러나 보고, 같이 하나에 이름을 않은 듯합니다. 릴케 가난한 옥 이름자 이름과, 멀리 위에 봅니다.</p>
+                <h2>내용</h2>
+                <p>가을 하나의 이 버리었습니다. 밤을 어머님, 하나에 별 마디씩 있습니다.</p>
+            </div>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>웹 브라우저의 크기를 변경하면 사이트의 모양이 변경됨</p>
+    </footer>
+</body>
+</html>

@@ -70,3 +70,6 @@ section {
     margin: 0 auto;
 }
 
+.hamburger > .hamburgerin {
+    font-size: 30px;
+}

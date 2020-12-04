@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {box-sizing: border-box;}
+
+        .loginhd {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .loginbody {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .input01 {
+            width: 25%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .loginfooter {
+            text-align: center;
+        }
+
+        .input02 {
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 22px;
+            padding: 15px;
+            width: 24%;
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .loginhd{font-size: 32px;}
+        }
+
+        @media screen and (max-width: 768px) {
+            .loginhd{font-size: 16px;}
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!-- 문제 1. 특정 사이트에 로그인하기 위한 id 및 pw 입력 창을 만들고, 로그인 버튼도 생성하세요
+    ps. 화면의 크기에 따라 id/pw창의 글자 크기가 변경됨
+    ps. 화면의 크기는 768px을 기준으로 함
+    ps. 폰트의 크기는 32px(큰 화면), 16px(작은 화면)을 사용
+    ps. 다른 CSS 속성은 마음대로 추가
+    -->
+
+    <main>
+        <div class="loginhd">
+            Login
+        </div>
+
+        <div class="loginbody">
+            <input class="input01" type="text" name="id" placeholder="아이디"><br>
+            <input class="input01" type="text" name="pw" placeholder="비밀번호">
+        </div>
+
+        <div class="loginfooter">
+            <input class="input02" type="submit" value="로그인">
+        </div>
+    </main>
+</body>
+</html>

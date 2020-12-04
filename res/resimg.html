@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지</title>
+
+    <style>
+        #div01 .img-width img {
+            width: 100%;
+            height: auto;
+        }
+
+        #div03 .img-max-width img {
+            /* 
+            max-width : 최대 너비를 설정
+            min-width : 최소 너비를 설정
+            ma-width 를 설정하고 width에 고정값을 주면 max-width가 동작하지 않음
+            */
+            max-width: 100%;
+            height: auto;
+            
+        }
+
+        #div04  .imgCh {
+                height: 400px;
+                background-image: url("./images/pepe1.jpg");
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+        @media screen and (max-width: 768px) {
+            #div04 .imgCh {background-image: url("./images/pepekick.jpg");}
+        }
+
+        @media screen and (max-width: 567px) {
+            #div04 .imgCh {background-image: url("./images/pepe3.jpg");}
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h2>그냥width 사용시</h2>
+        <div class="img-width">
+            <img src="/float1/images/롸롸롸롸.gif" alt="">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h2>기본</h2>
+        <div class="img-max-width">
+            <img src="/float1/images/롸롸롸롸.gif" alt="">
+        </div>
+    </div>
+
+    <div id="div03">
+        <h2>max-width 사용시</h2>
+        <div class="img-max-width">
+            <img src="/float1/images/롸롸롸롸.gif" alt="">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>화면 크기에 따른 이미지 변경<h3>
+        
+        <div class="imgCh">
+            <h4>미디어 쿼리를 사용하여 이미지 변경</h4>
+            <img src="/float1/images/아구몬.jpg" alt="">
+        </div>
+        <br>
+        <div>
+            <h4>picture 태그를 사용하여 이미지 변경</h4>
+            <picture>
+                <!-- max-width가 작은값을 먼저 입력 -->
+                <!-- source 태그의 media 속성은 미디어쿼리의 옵션 사용 -->
+                <source srcset="/float1/images/pepe1.jpg " media="(max-width:567px)">
+                <source srcset="/float1/images/pepekick.jpg" media="(max-width:768px)">
+                <source srcset="/float1/images/pepe3.jpg">
+                    <img src="/float1/images/pepe3.jpg" alt="">
+            </picture>
+        </div>
+    </div>
+
+</body>
+</html>
