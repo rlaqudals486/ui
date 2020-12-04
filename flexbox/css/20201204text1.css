@@ -1,0 +1,125 @@
+/* 문제 1) flex box를 사용하여 만들어진 현재 사이트를 float을 사용하는 방식으로 하여 작성하세요 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+header {
+    padding: 100px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav li a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav li > a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+    float: left;
+    width: 100%;
+}
+
+main {
+
+    background-color: white;
+}
+
+aside {
+    background-color: #f1f1f1;
+    padding: 20px;
+    float: left;
+    width: 30%;
+    height: 1340px;
+}
+
+section {
+    padding: 20px;
+    float: left;
+    width: 70%;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    padding: 15px 0px;
+}
+
+h5 {
+    padding: 15px 0px;
+}
+
+.fake-img {
+    background-color: #aaaaaa;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+p {
+    padding: 15px 0px;
+}
+
+.photo-me {
+    height: 200px;
+}
+
+.photo-link {
+    height: 60px;
+}
+
+.photo-post {
+    height: 200px;
+}
+
+article {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 576px) {
+    aside{width: 100%;}
+    section{width: 100%;}
+    nav li{width: 100%;}
+}
+

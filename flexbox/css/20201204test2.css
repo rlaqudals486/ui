@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 70px 0px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+section {
+    margin: 10px;
+}
+
+.textbox01, .textbox02, .textbox03, .textbox04 {
+    float: left;
+    width: 25%;
+    padding: 5px
+}
+
+.textbox01 img {
+    width: 100%;
+}
+
+.textbox02 img{
+    width: 100%;
+}
+
+.textbox03 img {
+    width: 100%;
+}
+
+.textbox04 img {
+    width: 100%;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 576px) {
+    .textbox01 {width: 100%;}
+    .textbox02 {width: 100%;}
+    .textbox03 {width: 100%;}
+    .textbox04 {width: 100%;}
+}

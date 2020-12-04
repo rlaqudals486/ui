@@ -26,7 +26,6 @@
     margin: 10px;
     text-align: center;
     font-size: 30px;
-    /* 줄간격 */
     line-height: 75px;
 }
 
@@ -34,23 +33,33 @@
     flex-wrap: wrap;
 }
 
-#div04 .wrap-reverse{
+#div04 .wrap-reverse {
     flex-wrap: wrap-reverse;
 }
 
-#div04 .nowrap{
+#div04 .norap {
     flex-wrap: nowrap;
 }
 
-#div05 .flex-flow{
+#div05 .flex-flow {
     flex-flow: row wrap;
 }
 
-#div06 .center {justify-content: center;}
-#div06 .flex-start {justify-content: flex-start;}
-#div06 .flex-end {justify-content: flex-end;}
-#div06 .space-around {justify-content: space-around;}
-#div06 .space-between {justify-content: space-between;}
+#div06 .center {
+    justify-content: center;
+}
+#div06 .flex-start {
+    justify-content: flex-start;
+}
+#div06 .flex-end {
+    justify-content: flex-end;
+}
+#div06 .space-around {
+    justify-content: space-around;
+}
+#div06 .space-between {
+    justify-content: space-between;
+}
 
 .flex-container2 {
     display: flex;
@@ -63,12 +72,63 @@
     width: 100px;
     margin: 10px;
     text-align: center;
-    line-height: 750x;
+    line-height: 75px;
     font-size: 32px;
 }
 
-#div07 .vertical-center { align-items: center;}
-#div07 .vertical-start {align-items: flex-start;}
-#div07 .vertical-end {align-items: flex-end;}
-#div07 .stretch {align-items: stretch;}
-#div07 .baseline {align-items: baseline;}
+#div07 .vertical-center {
+    align-items: center;
+}
+#div07 .vertical-start {
+    align-items: flex-start;
+}
+#div07 .vertical-end {
+    align-items: flex-end;
+}
+#div07 .strectch {
+    align-items: stretch;
+}
+#div07 .baseline {
+    align-items: baseline;
+}
+
+.flex-container3 {
+    display: flex;
+    height: 600px;
+    flex-wrap: wrap;
+    background-color: dodgerblue;
+}
+
+.flex-container3 > div {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 32px;
+    margin: 10px;
+}
+
+#div08 .space-between {
+    align-content: space-between;
+}
+
+#div08 .space-around {
+    align-content: space-around;
+}
+
+#div08 .strectch {
+    align-content: stretch;
+}
+
+#div08 .center {
+    align-content: center;
+}
+
+#div08 .flex-start {
+    align-content: flex-start;
+}
+
+#div08 .flex-end {
+    align-content: flex-end;
+}

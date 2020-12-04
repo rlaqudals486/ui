@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainpage {
+    background-image: url("/float1/images/설산.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 26px;
+    color: white;
+}
+
+.coming {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    /* font-weight: 700; */
+    font-size: 50px;
+}
+
+.solid01 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    width: 180px;
+}
+
+h5 {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 18px;
+}
+
+h6 {
+    position: absolute;
+    top: 97%;
+    left: 1%;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .coming {font-size: 35px;}
+    h5 {font-size: 90%;}
+    .solid01 {width: 120px;}
+}
+
+@media screen and (max-width: 576px) {
+    .coming {font-size: 25px;}
+    h5 {font-size: 60%;}
+    .solid01 {width: 90px;}
+}
+
