@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown 메뉴를 사용한 네비게이션바</title>
+    <style>
+        .navbar {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 세로형의 메뉴를 가로형으로 변경하기 위한 flaot을 다시 클리어 */
+        .navbar ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 세로형 메뉴를 가로형 메뉴로 변경 */
+        .navbar li {
+            float: left;
+        }
+
+        /*  */
+        .navbar a {
+            /* a 태그의 display가 inline이어서 margin 및 padding의 top, bottom 속성이 제대로 사용되지 않으므로 정상적인 사용을 위해서 block이나 inline-block을 사용 */
+            display: inline-block;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            /* 네비게이션바의 높이를 결정, 메뉴 하나하나의 거리를 벌려줌 */
+            /* a 태그의 padding을 사용해서 네비게이션바의 크기를 설정한 것은 
+                li와 같은 부모 태그에서 크기를 설정하면 네비게이션바의 전체 크기는 커지나, 
+                a태그의 영역 자체는 좁아서 마우스로 클릭하기 힘들어지는 상황이 발생됨 */
+            padding: 16px;
+        }
+
+        .navbar li a:hover, .dropdown:hover .dropdown-menu {
+            background-color: red;
+        }
+
+        .dropdown {
+            overflow: hidden;
+        }
+
+        .dropdown .dropdown-menu {
+            font-size: 16px;
+            /* 버튼 태그의 기본 border값을 없애서 네비게이션바와 같은 모양이 되도록 함 */
+            border: none;
+            color: white;
+            /* 앞서 존재하는 네비게이션바의 a 태그와 같은 padding을 가져야 함 */
+            padding: 16px;
+            margin: 0;
+            /* 네비게이션바와 동일한 스타일을 위해서 변경 */
+            /* background-color: #333333; */
+            /* inherit : 부모 태그로부터 해당 속성값을 상속받아 사용한다는 의미 */
+            /* initial : 속성값을 html의 기본값으로 사용 */
+            background-color: inherit;
+        }
+
+        /* 드랍다운 메뉴 */
+        .dropdown-item {
+            /* 기본적으로 숨기기 위해서 display:none 을 사용 */
+            display: none;
+            position: absolute;
+            background-color: lightgray;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+
+        .dropdown-item a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-item a:hover {
+            background-color: darkgray;
+            color: white;
+        }
+
+        /* 마우스 포인터가 올라갔을 경우 드랍다운 메뉴 출력 */
+        .dropdown:hover .dropdown-item {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">링크1</a></li>
+            <li><a href="#">링크2</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-menu">Dropdown</button>
+                    <div class="dropdown-item">
+                        <a href="#">링크3-1</a>
+                        <a href="#">링크3-2</a>
+                        <a href="#">링크3-3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

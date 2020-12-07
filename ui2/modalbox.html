@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal box 사용</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        /* 실제 모달창 부분 */
+        .modal {
+            /* 처음엔 출력하면 안되기 때문에 display:none */
+            display: none;
+            /* 모달창 이외의 부분의 UI는 동작하면 안되기 때문에 position:fixed를 사용하여 웹 브라우저의 body영역 전체에 고정 */
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            padding-top: 100px;
+            /* 화면 전체를 커버하기 위해서 너비, 높이 100% */
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            /* 모달창 이외의 부분은 투명도 조절을 통해서 비활성화했다는 것을 알리기 위해 rgba를 사용 */
+            background-color: rgb(0, 0, 0);
+        }
+
+        /* 모달창의 컨텐츠 영역 */
+        .modal-content {
+            background-color: #fefefe;
+            /* 너비를 지정하고, margin의 left, right를 auto로 주면 중앙 정렬 됨 */
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888888;
+        }
+
+        /* 닫기 버튼 */
+        .btn-close {
+            color: gray;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .btn-close:hover, .btn-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $("#btnOpen").on("click", function() {
+                $("#modal").css("display", "block");
+                // 예전 팝업창 사용방법
+                // window.open(null,"popup test", "width=500, height=500")
+            });
+
+            $("#btnClose").on("click", function() {
+                $("#modal").css("display", "none");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 버튼 클릭 시 아래의 modal box 영역을 출력함 -->
+    <button id="btnOpen">Open Modalbox</button>
+
+    <!-- 평상시에는 display:none을 통하여 숨겨진 영역 -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="btn-close" id="btnClose">&times;</span>
+            <p>modalbox을 사용하여 팝업창 사용</p>
+        </div>
+    </div>
+</body>
+</html>

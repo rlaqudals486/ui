@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .testbody {
+            height: 3000px;
+            background: linear-gradient(150deg, #0fb8ad 0%, #1fc8bd 50%, #2cb5e8 80%);
+
+            /* 색상 그라데이션 사용 */
+            /* 그라데이션은 선형과 방사형 2가지로 나누어짐 */
+
+            /* linear-gradient(각도, 컬러1, 컬러2, ...) */
+            /* 각도 : 지정된 각도사용, 0 ~ 360deg의 값을 입력 */
+                /* to bottom, to top, to left, to right, to top left */
+                /* 직접 각도 입력 시 시게의 12시가 0도, 6시가 180도로 입력하며 시계방향으로 움직임 */
+            /* 색상 : 지정된 색상, hex, rgb, hsl, 생상을 2가지 이상 입력 */
+            /* 각도를 입력하지 않을 경우 기본값으로 위에서 아래로 그라데이션을 진행함 */
+
+            /* radial-gradient(중심 사이즈, 시작컬러, ..., 끝컬러) */
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(red, yellow);
+            margin: 20px 0px;
+        }
+
+        .gra1 {background: linear-gradient(red, yellow);}
+        .gra2 {background: linear-gradient(to top, red, yellow);}
+        .gra3 {background: linear-gradient(to left, red, yellow);}
+        .gra4 {background: linear-gradient(to right, red, yellow);}
+        .gra5 {background: linear-gradient(to top left, red, yellow);}
+        .gra6 {background: linear-gradient(160deg, red, yellow);}
+    </style>
+</head>
+<body>
+    <h1>그라디언트 배경색상 변경</h1>
+    <p>마우스 휠을 돌리면 색상이 점점 변경 됨</p>
+
+    <div class="testbody">
+
+    </div>
+
+    <div class="box gra1"></div>
+    <div class="box gra2"></div>
+    <div class="box gra3"></div>
+    <div class="box gra4"></div>
+    <div class="box gra5"></div>
+    <div class="box gra6"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <style>
+        .drop-menu {
+            background-color: greenyellow;
+            color: black;
+            padding: 16px;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            /* dropdown 버튼을 사용하기 위한 영역인 div가 dispaly: block이므로 버튼처럼 사용하기 위해서 inline-block으로 변경 */
+            display: inline-block;
+        }
+
+        /* dropdown 버튼에 마우스가 올라갔을 경우 화면에 표시되는 메뉴 */
+        .dropdown-item {
+            /* 평상시는 화면에 출력하지 않기 위해서 display:none */
+            display: none;
+            /* position:absolute을 사용하려면 부모 태그에서 position:relative를 반드시 사용해야 함 */
+            position: absolute;
+            background-color: lightgray;
+            /* 출력되는 메뉴의 최소 크기 설정 */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            /* 동인한 위치에 다른 태그와 겹칠 경우 더 위쪽에 그려지도록 하는 속성 */
+            z-index: 100;
+        }
+
+        .dropdown-item a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* a 태그는 display: inline이므로 block로 변경하여 세로형 메뉴로 보이도록 함 */
+            display: block;
+        }
+
+        /* 출력된 dropdown 메뉴에서 마우스 포인터가 어디에 있는지 표기하기 위한 설정 */
+        .dropdown-item a:hover {background-color: darkgray;}
+        /* dropdown 메뉴의 가장 조상태그에 hover 옵션을 사용하여 마우스 포인터가 dropdown 메뉴 전체 어디에 존재해도 dropdown 메뉴가 표시 되도록 함 */
+        .dropdown:hover .dropdown-item {display: block;}
+        .dropdown:hover .drop-menu {background-color: green;}
+    </style>
+</head>
+<body>
+    <h3>dropdown 버튼 만들기</h3>
+
+    <div class="dropdown">
+        <button class="drop-menu">Dropdown button</button>
+        <!-- 평상시는 display:none을 통하여 숨겨져 있다가 마우스 포인터가 해당 버튼 위에 올라가면 보여지는 형태 -->
+        <div class="dropdown-item">
+            <a href="#">링크1</a>
+            <a href="#">링크2</a>
+            <a href="#">링크3</a>
+        </div>
+    </div>
+</body>
+</html>

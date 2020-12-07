@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 네비게이션바</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        .topnav a {
+            /* ul, li 태그를 사용하지 않고 네비게이션바로 만들기 때문에 a 태그에 flaot:left를 사용 */
+            float: left;
+            /* li 태그를 flaot:left 사용한 것과 동일한 효과를 주기 위해서 display:block 으로 설정 */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .topnav a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+
+        /* 화면이 작을 때만 출력하는 버튼을 평상시에는 숨김 */
+        .topnav .icon {
+            display: none;
+        }
+
+        /* 화면이 최소 577px 이상일 경우는 위의 CSS를 적용하고 576px 이하일 경우 아래의 CSS를 적용 */
+        @media screen and (max-width: 576px) {
+
+            /* :first-child : 직계 자손태그 중 첫번째 태그를 선택하는 선택자 */
+            /* :not : 선택한 태그와 반대되는 태그를 선택하는 선택자 */
+            /* .topnav 클래스명을 가진 태그의 직계 후손 태그 중 첫번째 태그를 제외한 모든 태그를 display:none 으로 설정 */
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            /* .topnav 클래스명을 가진 태그의 후손 태그 중 a태그이면서 클래스명이 icon인 태그를 선택 */
+            .topnav a.icon {
+                /* flaot : left 였던 것을 right로 변경 */
+                float: right;
+                /* 첫번째 후손 태그를 제외한 모든 태그를 display:none 했었으나 다시 block로 변경 */
+                display: block;
+            }
+
+            .topnav.res {
+                position: relative;
+            }
+
+            .topnav.res .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.res a {
+                /* 기존의 a 태그는 flaot:left를 사용하여 가로형 메뉴로 사용되고 있었으나, float:none을 사용하여 flaot 속성을 clear 시켜줌 */
+                float: none;
+                /* 화면의 너비가 576px 이하로 떨어지면서 사용되었던 display:none을 block으로 변경하여 세로형 메뉴로 변경함 */
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#icon").on("click", function () {
+                $(".topnav").toggleClass("res");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="topnav" id="myTopnav">
+        <a href="#">링크1</a>
+        <a href="#">링크2</a>
+        <a href="#">링크3</a>
+        <a href="#">링크4</a>
+
+        <!-- 화면이 작아졌을 경우 표시할 메뉴 버튼 -->
+        <a class="icon" id="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <p>화면 크기에 따라서 메뉴가 숨겨짐 (576px)</p>
+</body>
+
+</html>

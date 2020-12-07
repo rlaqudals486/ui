@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darkgray;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            /* 중앙 정렬 */
+            margin: 0 auto;
+        }
+
+        /* ::after, ::before 가상 클래스 */
+        /* before : 지정한 태그의 앞에서 동작 */
+        /* after : 지정한 태그의 뒤에서 동작 */
+        /* 타임라인 중앙 선 그리기 */
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            /* 타임라인을 중앙에 배치하기 위함 */
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            /* 전체 크기의 50%의 너비를 사용 */
+            width: 50%;
+        }
+
+        /* container 클래스에 after 를 사용하여 container 클래스를 사용하면 자동으로 원형을 그려줌 */
+        .container::after {
+            content: "";
+            position: absolute;
+            /* 자동으로 그려지는 도형의 크기 25 x 25 */
+            width: 25px;
+            height: 25px;
+            /* border-radius: 50을 사용하여 네모를 원형으로 변경 */
+            border-radius: 50%;
+            top: 15px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9f55;
+            z-index: 100;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        /* left가 그려지기 전에 추가로 그려짐 */
+        .left::before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            right: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 0px 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0px;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p>했던 말 이름자 소녀들의 하나에 북간도에 이런 있습니다. 이름과, 가득 하늘에는 어머니 경, 벌레는 잠, 있습니다.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>불러 쉬이 이름과 있습니다. 속의 이네들은 무덤 노새, 위에도 까닭입니다.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>말 이네들은 새겨지는 새워 소학교 하나의 그리워 겨울이 듯합니다. 이름자 하늘에는 하나에 불러 내 불러 계십니다. 위에도 슬퍼하는 이 부끄러운 까닭이요, 책상을 아름다운
+                    버리었습니다. 헤일 이름과, 이웃 라이너 딴은 하늘에는 나의 경, 벌레는 계십니다.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p>북간도에 지나가는 헤는 릴케 언덕 된 있습니다. 별 어머니 때 밤을 가득 동경과 가난한 있습니다. 남은 덮어 이웃 나는 피어나듯이 아이들의 별 까닭입니다.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
